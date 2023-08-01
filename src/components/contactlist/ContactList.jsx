@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchContacts, deleteContact } from 'redux/operations';
-import { getContactsNames } from 'redux/contactsSlice';
+import { getContactsNames } from 'redux/selectors';
 import { getFilteredNames } from 'redux/filterSlice';
 
 import {

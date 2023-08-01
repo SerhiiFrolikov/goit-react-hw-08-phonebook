@@ -42,4 +42,3 @@ const handlePending = state => {
 };
 
 export const contactsReducer = contactsSlice.reducer;
-export const getContactsNames = state => state.contacts.items;
