@@ -7,9 +7,9 @@ import {
   AddContactBtn,
   FormLabel,
   FormInput,
-} from './ContactForm.styled';
+} from './ContactsForm.styled';
 
-export const ContactForm = () => {
+export const ContactsForm = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(getContactsNames);
   const [name, setName] = useState('');
