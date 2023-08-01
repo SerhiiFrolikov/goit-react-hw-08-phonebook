@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import { fetchContacts } from 'redux/operations';
 import { selectLoading } from 'redux/selectors';
-import { ContactList } from 'components/ContactList/ContactList';
+import { ContactsList } from 'components/ContactsList/ContactsList';
 import { ContactForm } from 'components/ContactForm/ContactForm';
 
 export default function Contacts() {
@@ -21,7 +21,7 @@ export default function Contacts() {
       </Helmet>
       <ContactForm />
       <div>{isLoading && 'Request in progress...'}</div>
-      <ContactList />
+      <ContactsList />
     </>
   );
 }

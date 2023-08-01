@@ -10,9 +10,9 @@ import {
   Name,
   PhoneNumber,
   DeleteBtn,
-} from './ContactList.styled';
+} from './ContactsList.styled';
 
-export const ContactList = () => {
+export const ContactsList = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(getContactsNames);
   const queryFilter = useSelector(getFilteredNames);
