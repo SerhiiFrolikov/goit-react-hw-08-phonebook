@@ -1,10 +1,11 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
-import { fetchContacts } from 'redux/operations';
-import { selectLoading } from 'redux/selectors';
+import { fetchContacts } from 'redux/contacts/operations';
 import { ContactsList } from 'components/ContactsList/ContactsList';
 import { ContactsForm } from 'components/ContactsForm/ContactsForm';
+import { selectLoading } from 'redux/contacts/selectors';
+import { Filter } from 'components/Filter/Filter';
 
 export default function Contacts() {
   const dispatch = useDispatch();
@@ -21,6 +22,7 @@ export default function Contacts() {
       </Helmet>
       <ContactsForm />
       <div>{isLoading && 'Request in progress...'}</div>
+      <Filter />
       <ContactsList />
     </>
   );

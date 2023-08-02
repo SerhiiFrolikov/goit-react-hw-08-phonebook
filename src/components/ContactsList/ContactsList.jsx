@@ -1,8 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchContacts, deleteContact } from 'redux/operations';
-import { getContactsNames } from 'redux/selectors';
-import { getFilteredNames } from 'redux/filterSlice';
+import { deleteContact, fetchContacts } from 'redux/contacts/operations';
+import { getContactsNames } from 'redux/contacts/selectors';
+import { getFilteredNames } from 'redux/filter/filterSlice';
 
 import {
   List,
@@ -31,11 +31,11 @@ export const ContactsList = () => {
 
   return (
     <List>
-      {filteredContacts.map(({ name, id, phone }) => {
+      {filteredContacts.map(({ name, id, number }) => {
         return (
           <ListItem key={id}>
             <Name>
-              {name}: <PhoneNumber>{phone}</PhoneNumber>
+              {name}: <PhoneNumber>{number}</PhoneNumber>
             </Name>
             <DeleteBtn id={id} onClick={() => handleDeleteContact(id)}>
               Delete

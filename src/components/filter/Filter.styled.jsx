@@ -9,6 +9,7 @@ export const Form = styled.form`
 export const FindLabel = styled.label`
   display: flex;
   flex-direction: column;
+  margin-top: 10px;
   gap: 10px;
   font-size: 18px;
   font-weight: 500;
