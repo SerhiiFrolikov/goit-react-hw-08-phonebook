@@ -1,6 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { useEffect } from 'react';
-import { deleteContact, fetchContacts } from 'redux/contacts/operations';
+import { deleteContact } from 'redux/contacts/operations';
 import { getContactsNames } from 'redux/contacts/selectors';
 import { getFilteredNames } from 'redux/filter/filterSlice';
 
@@ -16,10 +15,6 @@ export const ContactsList = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(getContactsNames);
   const queryFilter = useSelector(getFilteredNames);
-
-  useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch]);
 
   const filteredContacts = contacts.filter(contact =>
     contact.name.toLowerCase().includes(queryFilter.toLowerCase())

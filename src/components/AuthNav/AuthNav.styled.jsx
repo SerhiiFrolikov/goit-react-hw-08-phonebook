@@ -17,7 +17,6 @@ export const StyledLink = styled(NavLink)`
   width: 98px;
   height: 38px;
   display: flex;
-  margin-top: 10px;
   justify-content: center;
   align-items: center;
   transition: color 250ms linear, background-color 250ms linear;
